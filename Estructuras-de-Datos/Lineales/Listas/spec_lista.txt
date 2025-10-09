@@ -1,11 +1,10 @@
-
 Especificacion Lista
 
   Constructoras:
 
       vacia:->Lista;   // Lista vacia();
 
-      cons: Elem, Lista -> Lista;
+      cons: Elem, Lista -> Lista; //Creacion de lista
 
   Observadoras:
 
