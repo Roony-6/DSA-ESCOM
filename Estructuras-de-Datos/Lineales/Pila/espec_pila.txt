@@ -1,0 +1,31 @@
+Especificacion Pila
+
+//Contructoras:
+
+empty:  -> Pila;
+push: Pila, Elem -> Pila;
+
+//Observadoras:
+
+isEmpty: Pila -> bool;
+top: Pila -> Elem;
+
+//Destructoras:
+
+pop: Pila -> Pila;
+
+
+Axiomas: Pila p, Elem e;
+
+[p1]	isEmpty(empty()) = true;
+
+[p2]	isEmpty(push(p,e)) = false;
+
+[p3]	top(empty(q)) = ERROR;
+
+[p4]	top(push(q,e)) = e;
+
+[p5]	pop(empty()) = ERROR;
+
+[p6]	pop(push(q,e)) = q;
+
