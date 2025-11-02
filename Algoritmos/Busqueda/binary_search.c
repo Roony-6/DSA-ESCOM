@@ -4,10 +4,13 @@ int binarySearch(int ,int*, int);
 
 int main (){
     int *arr, n, target;
-    printf("Digita el tamanio del arreglo");
-    scanf("%d",&n);
-    llenarAleatorio(arr,n,1,100);
-    imprimirArreglo(arr,n);
+    printf("Digita el tamanio del arreglo: ");
+    scanf("%d", &n);
+
+    arr = malloc(n * sizeof(int));  
+    llenarAleatorio(arr,n,0,100);
+    imprimirArreglo(arr, n);
+
 
     printf("Que numero quieres buscar?");
     scanf("%d",&target);
