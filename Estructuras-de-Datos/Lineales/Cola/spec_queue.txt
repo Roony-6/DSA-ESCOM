@@ -1,0 +1,29 @@
+QUEUE SPECIFICATION
+
+//Constructoras:
+
+nueva: -> queue;
+enqueque: queue, elemento -> queue;
+
+//Observadoras:
+
+esVacia: queue -> bool;
+peek: queue -> elemento;
+
+//Destructoras:
+
+dequeque: queue -> queue;
+
+Axiomas: queue q, elemento e;
+
+[q1]	esVacia(nueva()) = true;
+
+[q2]	esVacia(enqueque(q,e)) = false;
+
+[q3]	peek(nueva()) = ERROR;
+
+[q4]	peek(enqueque(q,e)) = if esVacia(q) then e else peek(q) fi;
+
+[q5]	dequeque(nueva()) = ERROR;
+
+[q6]	dequeque(enqueque(q,e)) = if esVacia(q) then nueva() else enqueque(dequeque(q),e) fi;
